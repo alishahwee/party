@@ -23,7 +23,7 @@ class PartyTests(unittest.TestCase):
         """Do users who haven't RSVPed see the correct view?"""
 
         result = self.client.get("/")
-        self.assertIn(b"sdfafdf", result.data)
+        self.assertIn(b"Please RSVP", result.data)
         
     def test_rsvp(self):
         """Do RSVPed users see the correct view?"""
